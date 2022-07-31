@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>ERROR HANDLING</h2>
+
+<p id="demo"></p>
+<p id="d"></p>
+<p id="d1"></p>
+<p id="no"></p>
+<script>
+let text;
+ document.write("<h2>FOR LOOPS</h2>");
+for (let i = 1; i < 100; i++) {
+  if(i%5==0 && i%3==0 )
+  {
+     document.write("TalentioCompany<br>");
+  }
+  else if(i%3==0) 
+ {
+    document.write("Talentio<br>");
+ } 
+  else if(i%5==0)
+ {
+     document.write("Company<br>");
+ } 
+  else
+ {  
+    document.write(i+"<br>");
+ }
+
+ 
+} 
+
+let t = "How are you doing today?";
+try{
+const myArray = t.split(" ");
+document.getElementById("demo").innerHTML = myArray;
+const a1=myArray.reverse();
+document.getElementById("d").innerHTML = a1;
+const a2=a1.join();
+document.getElementById("d1").innerHTML = a2;}
+catch(err){ document.getElementById("no").innerHTML = err.message;}
+
+function decimals(n, d) {
+ if ((typeof n !== 'number') || (typeof d !== 'number'))
+   return false;
+    	n = parseFloat(n) || 0;
+	return n.toFixed(d);
+	}
+document.write("<h2>NUMBERS</h2>"+decimals(2.100212, 2)+"<br>");
+document.write(decimals(2.100212, 3)+"<br>");
+document.write(decimals(2100, 2));
+
+document.write("<h2>STRINGS</h2>")
+let s1 = "Talentio is the best";
+const Array1 = s1.split(" ");
+document.write(Array1+"<br>");
+document.write("<h2>ARRAYS SORTING</h2>")
+const j= [3, 8, 7, 6, 5, -4, 3, 2, 1];
+document.write(j.sort());
+
+
+</script>
+
+</body>
+</html>
